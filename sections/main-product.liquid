@@ -355,7 +355,7 @@ endfor
                           var grandSize = $(this).attr('src').split('?')[0].replace('_compact','');
                         
 
-                        newImageSizedSrc = newImageSizedSrc.split('?')[0].replace('https:','').replace('http:','');
+                        newImageSizedSrc = newImage.src.split('?')[0].replace('https:','').replace('http:','');
                           if(grandSize === newImageSizedSrc) {
                               var item = $(this).closest('.item');
 
