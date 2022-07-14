@@ -818,21 +818,21 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        width: calc(100% - 260px)
+        width: calc(100% - 100px)
     }
     .navigation-08 .header-bottom-left.no-right-text {
-        width: calc(100% - 160px)
+        width: calc(100% - 100px)
     }
 
     .navigation-08 .header-bottom-right {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        width: 260px
+        width: 100px
     }
 
     .navigation-08 .header-bottom-right.no-right-text {
-        width: 160px;
+        width: 100px;
     }
 
     .navigation-08 .lang-currency-groups:hover {
