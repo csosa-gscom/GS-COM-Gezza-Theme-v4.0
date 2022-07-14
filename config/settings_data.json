@@ -3128,96 +3128,53 @@
           "search_color": "#505050",
           "style_cart": "style_1",
           "bg_cart_color": "#fdbd36",
-          "cart_color": "#3c3c3c"
+          "cart_color": "#202020"
         }
       },
       "navigation-08": {
         "type": "navigation-08",
-        "blocks": {
-          "de270f32-39c0-4b35-9a21-b9e4fc40f3b6": {
-            "type": "style_1",
-            "settings": {
-              "megamenu_items_1": "New In",
-              "title_featured_product": "Featured Products",
-              "featured_product": "hentum-tosmois-de-laptop-hamo-dincidunts",
-              "link_banner_first_style_1": ""
-            }
-          },
-          "0995553a-0553-4dda-998d-00c0733c0821": {
-            "type": "style_2",
-            "settings": {
-              "megamenu_items_2": "clothing, shoes",
-              "link_banner_first_style_2": "",
-              "link_banner_second_style_2": "",
-              "link_banner_third_style_2": ""
-            }
-          },
-          "7c02301d-2075-47f5-9b5e-02d9b9c2e733": {
-            "type": "style_3",
-            "settings": {
-              "megamenu_items_3": "home, furniture",
-              "link_banner_first_style_3": "",
-              "link_banner_second_style_3": "",
-              "link_banner_third_style_3": "",
-              "link_banner_four_style_3": "",
-              "link_banner_five_style_3": ""
-            }
-          },
-          "73940c60-4c18-4164-8825-ecf145677fbb": {
-            "type": "style_4",
-            "settings": {
-              "megamenu_items_4": "toys, games",
-              "link_banner_first_style_4": ""
-            }
-          }
-        },
-        "block_order": [
-          "de270f32-39c0-4b35-9a21-b9e4fc40f3b6",
-          "0995553a-0553-4dda-998d-00c0733c0821",
-          "7c02301d-2075-47f5-9b5e-02d9b9c2e733",
-          "73940c60-4c18-4164-8825-ecf145677fbb"
-        ],
         "settings": {
           "display_fixtop_menu": true,
-          "horizontal_linklist": "",
+          "logo_fix": "shopify:\/\/shop_images\/Logo.png",
+          "horizontal_linklist": "top-nav-bar",
           "text_help": "Help",
           "text_help_link": "#",
-          "color_text_right": "#202020",
-          "color_icon_right": "#fd6506",
-          "color_text_right_line": "#dedede",
+          "color_text_right": "#d91eca",
+          "color_icon_right": "#d91eca",
+          "color_text_right_line": "#d91eca",
           "display_vertical_menu": true,
-          "vertical_linklist": "",
-          "bg_color_hover_menu_vertical": "#fd6506",
-          "color_hover_text_menu_vertical": "#ffffff",
+          "vertical_linklist": "categories",
+          "bg_color_hover_menu_vertical": "#fefeff",
+          "color_hover_text_menu_vertical": "#fdbd36",
           "categories_title": "Categories",
-          "color_title": "#232323",
-          "color_title_icon": "#fd6506",
-          "color_title_line": "#dedede",
-          "bg_menu": "#ffffff",
-          "bg_dropdown_menu": "#ffffff",
-          "bg_dropdown_menu_item": "#f5f5f5",
+          "color_title": "#202020",
+          "color_title_icon": "#fdbd36",
+          "color_title_line": "#fdbd36",
+          "bg_menu": "#fefeff",
+          "bg_dropdown_menu": "#fefeff",
+          "bg_dropdown_menu_item": "#fefeff",
           "color_menu_lv1": "#202020",
-          "hover_color_mnu_lv1": "#202020",
+          "hover_color_mnu_lv1": "#fdbd36",
           "font_size_mnu_lv1": "16px",
           "text_transform_mnu_lv1": "capitalize",
           "font_weight_mnu_lv1": "500",
           "letter_spacing_mnu_lv1": "0",
           "color_menu_lv2": "#202020",
-          "hover_color_mnu_lv2": "#e10600",
+          "hover_color_mnu_lv2": "#fdbd36",
           "font_size_mnu_lv2": "16px",
           "text_transform_mnu_lv2": "capitalize",
           "font_weight_mnu_lv2": "600",
           "letter_spacing_mnu_lv2": "0",
-          "color_menu_lv3": "#505050",
-          "hover_color_mnu_lv3": "#0a6cdc",
+          "color_menu_lv3": "#202020",
+          "hover_color_mnu_lv3": "#fdbd36",
           "font_size_mnu_lv3": "14px",
           "text_transform_mnu_lv3": "none",
           "font_weight_mnu_lv3": "400",
           "letter_spacing_mnu_lv3": "0",
           "enable_sale": true,
           "lb_sale": "Sale",
-          "sale_item": "",
-          "bg_lb_sale": "#ef6454",
+          "sale_item": "Web Deals",
+          "bg_lb_sale": "#ff3c38",
           "color_lb_sale": "#ffffff",
           "enable_new": true,
           "lb_new": "New",
