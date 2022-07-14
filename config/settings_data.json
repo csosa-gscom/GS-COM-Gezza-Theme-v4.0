@@ -3199,7 +3199,7 @@
           "header_bottom_icon_color": "#3c3c3c",
           "position_header_text": "right",
           "display_free_shipping": true,
-          "free_shipping_text": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0383\/9416\/7431\/files\/whatsapp-logo-35x35.png?v=1641832650\" alt=\"Whatsapp Logo\" style=\"float:left;margin-top: 3px;\">\n<span style=\"margin-left: 7px;\">WhatsApp us<\/span>\n<br>\n<b style=\"margin-left: 7px;\">621-3766<\/b>",
+          "free_shipping_text": "<div style=\"margin-top: -7px;\"><\/div>\n    <a href=\"https:\/\/api.whatsapp.com\/send?phone=5016213766\" style=\"text-decoration:none;\">\n        <img style=\"float:left; margin-top: 5px;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0383\/9416\/7431\/files\/whatsapp-logo-35x35.png?v=1641832650\" alt=\"Whatsapp us at 621-3766\">\n        <span style=\"margin-left: 7px; color: #3c3c3c; font-size: 14px; font-weight: lighter;\">WhatsApp us<\/span>\n        <br>\n        <span style=\"margin-left: 7px; color: #00aa60; font-size: 14px; font-weight: bold;\">621-3766<\/span>\n    <\/a>",
           "free_shipping_color": "#3c3c3c",
           "display_gift_cards": false,
           "gift_cards_text": "Gift Cards",
