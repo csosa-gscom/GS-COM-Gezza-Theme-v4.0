@@ -3849,6 +3849,70 @@
           "margin_bottom_tab": 40,
           "margin_bottom": 40
         }
+      },
+      "16579258947340c0fc": {
+        "type": "home-custom-sub-banner-3",
+        "blocks": {
+          "16579258947340c0fc-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/monitor-banner-2.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": "shopify:\/\/pages\/monitors-display-accessories"
+            }
+          },
+          "16579258947340c0fc-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Television-banner-2.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "Shop Now",
+              "link": "shopify:\/\/pages\/television-entertainment"
+            }
+          },
+          "16579258947340c0fc-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/printer-banner-2.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": "shopify:\/\/pages\/printer-supplies"
+            }
+          }
+        },
+        "block_order": [
+          "16579258947340c0fc-0",
+          "16579258947340c0fc-1",
+          "16579258947340c0fc-2"
+        ],
+        "settings": {
+          "layout": "default",
+          "sub_banner_style": "style_3",
+          "img_results_per_row": "3",
+          "widget_title": "",
+          "color_title": "",
+          "fontsize_title": "",
+          "fontsize_title_mb": "",
+          "font_weight_title": "700",
+          "text_transform_title": "capitalize",
+          "title_style": "style_1",
+          "widget_des": "",
+          "bg_color_style_3": "#f5f5f5",
+          "fontsize_text": "30px",
+          "fontsize_text_mb": "30px",
+          "font_weight_text": "700",
+          "text_transform_text": "uppercase",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0
+        }
       }
     },
     "content_for_index": [
@@ -3856,7 +3920,8 @@
       "1657917985ab75b45a",
       "1657920595360c8edc",
       "16579249692b921ab5",
-      "16579252809c5ac29a"
+      "16579252809c5ac29a",
+      "16579258947340c0fc"
     ]
   },
   "presets": {
