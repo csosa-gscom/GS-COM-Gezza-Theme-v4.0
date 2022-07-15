@@ -3123,7 +3123,7 @@
           "display_gift_cards": false,
           "gift_cards_text": "Gift Cards",
           "gift_cards_link": "",
-          "icon_search_color": "#202020",
+          "icon_search_color": "#505050",
           "bg_search_color": "#eceef0",
           "search_color": "#505050",
           "style_cart": "style_1",
