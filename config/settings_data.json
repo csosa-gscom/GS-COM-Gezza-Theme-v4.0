@@ -3133,6 +3133,50 @@
       },
       "navigation-08": {
         "type": "navigation-08",
+        "blocks": {
+          "6ee77d37-2bb9-4c71-b3a6-7d133341995b": {
+            "type": "style_5",
+            "settings": {
+              "menu_text_left": "",
+              "megamenu_items_5": "PC, Laptop & Tablets",
+              "skin_style_5": "skin_3",
+              "featured_product": "tablet-1",
+              "featured_product_limit_all": "8",
+              "link_banner_first_style_5": "",
+              "link_banner_second_style_5": "",
+              "title_brand": "Brands by alphabet",
+              "link_brand": "View all brands",
+              "select_page_5": ""
+            }
+          },
+          "c46e5107-3453-4efc-b64a-1e9d9b39c295": {
+            "type": "style_3",
+            "settings": {
+              "megamenu_items_3": "Catalog",
+              "link_banner_first_style_3": "",
+              "link_banner_second_style_3": "",
+              "link_banner_third_style_3": "",
+              "link_banner_four_style_3": "",
+              "link_banner_five_style_3": ""
+            }
+          },
+          "a5d84be4-18fd-4a3d-be72-c1ffc43992ef": {
+            "type": "style_3",
+            "settings": {
+              "megamenu_items_3": "Catalog",
+              "link_banner_first_style_3": "",
+              "link_banner_second_style_3": "",
+              "link_banner_third_style_3": "",
+              "link_banner_four_style_3": "",
+              "link_banner_five_style_3": ""
+            }
+          }
+        },
+        "block_order": [
+          "6ee77d37-2bb9-4c71-b3a6-7d133341995b",
+          "c46e5107-3453-4efc-b64a-1e9d9b39c295",
+          "a5d84be4-18fd-4a3d-be72-c1ffc43992ef"
+        ],
         "settings": {
           "display_fixtop_menu": true,
           "horizontal_linklist": "top-nav-bar",
