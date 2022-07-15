@@ -3239,7 +3239,7 @@
           "bg_lb_hot": "#ffbb49",
           "color_lb_hot": "#ffffff",
           "display_megamenu": true,
-          "bg_style_new_top": "rgba(0,0,0,0)",
+          "bg_style_new_top": "#fefeff",
           "bg_style_new": "#ffffff",
           "bg_color_arrow": "#8c8c8c",
           "color_arrow": "#ffffff"
