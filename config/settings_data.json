@@ -3247,18 +3247,17 @@
       },
       "16161244289c9ebde8": {
         "type": "home-announcement",
-        "disabled": true,
         "settings": {
           "message": true,
           "layout": "full",
-          "message_text": "<span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0064\/4435\/1539\/files\/icon-announcement-2.png?v=1620126487\" alt=\"\"><\/span> <span>BUY NOW, PAY LATER. Starting at 0% APR<\/span> <span class=\"btn\">learn more<\/span>",
+          "message_text": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0383\/9416\/7431\/files\/shipping_icon_d8df4b53-a318-4af1-b559-a48183030d94.png?v=1644461996\" alt=\"Delivery truck\">\n<span style=\"font-weight: bold;\">FREE HOME DELIVERIES FOR PURCHASES OVER $50<\/span> in San Ignacio | Belmopan | Belize City\n<span class=\"btn\">learn more<\/span>",
           "message_link": "",
           "show_close": false,
-          "bg_color_annou": "#f5f5f5",
+          "bg_color_annou": "rgba(0,0,0,0)",
           "color_text": "#202020",
           "color_text_btn": "#202020",
-          "bg_color_btn": "#f5f5f5",
-          "bg_color_border_btn": "#5f5f5f",
+          "bg_color_btn": "rgba(0,0,0,0)",
+          "bg_color_border_btn": "#202020",
           "margin_bottom_mb": 0,
           "margin_bottom_tab": 0,
           "margin_bottom": 0
