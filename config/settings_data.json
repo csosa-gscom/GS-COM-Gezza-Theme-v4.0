@@ -3152,11 +3152,16 @@
           "c46e5107-3453-4efc-b64a-1e9d9b39c295": {
             "type": "style_3",
             "settings": {
-              "megamenu_items_3": "Catalog",
+              "megamenu_items_3": "Computer Components",
+              "banner_first_style_3": "shopify:\/\/shop_images\/Computer_Hardware.png",
               "link_banner_first_style_3": "",
+              "banner_second_style_3": "shopify:\/\/shop_images\/Mice_Stylus_and_Controllers.png",
               "link_banner_second_style_3": "",
+              "banner_third_style_3": "shopify:\/\/shop_images\/Keyboard_and_Accessories.png",
               "link_banner_third_style_3": "",
+              "banner_four_style_3": "shopify:\/\/shop_images\/Headset_Speakerss_Webcams.png",
               "link_banner_four_style_3": "",
+              "banner_five_style_3": "shopify:\/\/shop_images\/Other_Peripherals.png",
               "link_banner_five_style_3": ""
             }
           },
