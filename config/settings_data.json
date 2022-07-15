@@ -3656,11 +3656,63 @@
           "menu": "",
           "enable_banner": true
         }
+      },
+      "1657920595360c8edc": {
+        "type": "home-featured-products",
+        "settings": {
+          "bg_color": "",
+          "layout_style": "layout_style_6",
+          "display_banner": true,
+          "banner_is": "left",
+          "image": "shopify:\/\/shop_images\/web-exclusive-banner.png",
+          "banner_heading": "",
+          "font_size_banner_heading": "",
+          "color_banner_heading": "#fff",
+          "banner_sub_heading": "",
+          "font_size_banner_sub_heading": "",
+          "color_banner_sub_heading": "#fff",
+          "banner_des": "",
+          "font_size_banner_des": "",
+          "color_banner_des": "#fff",
+          "banner_button": "",
+          "link": "",
+          "banner_button_2": "Shop Now",
+          "link_2": "",
+          "bg_banner_button": "#fff",
+          "border_banner_button": "#fff",
+          "color_banner_button": "#232323",
+          "bg_color_box_style_2": "#ffffff",
+          "border_color_box_style_2": "#bcbcbc",
+          "featured_products_title": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0383\/9416\/7431\/files\/web-exclusive-deals-icon.png?v=1643940665\" width=\"40\" height=\"40\" style=\"position: relative;top:0px;bottom:0px;margin-right:5px;\"> <span style=\"color:orange;font-size: 30px;\">WEB EXCLUSIVE<\/span> <span style=\"color:red;font-size: 30px;\"> DEALS<\/span>",
+          "color_text_title": "",
+          "font_size_title": "",
+          "font_size_title_mb": "",
+          "text_alignment": "left",
+          "featured_products_des": "",
+          "featured_products_text_link": "View All",
+          "featured_products_link": "shopify:\/\/collections\/web-exclusive-deals",
+          "color_text_link": "#202020",
+          "title_style": "style_4",
+          "show_slider_featured_collection": "web-exclusive-deals",
+          "slider_featured_limit_all": 20,
+          "collection_results_per_row1": "4",
+          "featured_products_title_2": "",
+          "featured_products_text_link_2": "",
+          "featured_products_link_2": "",
+          "show_slider_featured_collection_2": "",
+          "display_list_collection": false,
+          "text_list": "View all categories",
+          "url_list": "",
+          "margin_bottom_mb": 40,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 40
+        }
       }
     },
     "content_for_index": [
       "16161244289c9ebde8",
-      "1657917985ab75b45a"
+      "1657917985ab75b45a",
+      "1657920595360c8edc"
     ]
   },
   "presets": {
