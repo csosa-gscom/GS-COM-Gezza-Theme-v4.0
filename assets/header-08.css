@@ -1146,10 +1146,10 @@
 	    max-width: calc(80% + 10px);
 	}
 	.wrapper_header_08.enable_vertical_menu .navigation-08 .header-bottom-left {
-		width: calc(100% - 230px);
+		width: calc(100% - 100px);
 	}
 	.wrapper_header_08.enable_vertical_menu .navigation-08 .header-bottom-right {
-		width: 230px;
+		width: 100px;
 	}
 	.wrapper_header_08.enable_vertical_menu .is-sticky .navigation-08 .header-bottom-left {
 		width: 100%;
