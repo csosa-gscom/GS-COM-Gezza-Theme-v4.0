@@ -138,7 +138,7 @@
         <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before {% else %} {{ section.settings.title_style }}{% endif %}
         {{section.settings.text_alignment}}">   
           <h3 class="box-title">
-            <span class="title"> 
+            <span class="title" style="background-color: transparent;"> 
               {% render 'multilang' with section.settings.featured_products_title %}
             </span>
           </h3>
