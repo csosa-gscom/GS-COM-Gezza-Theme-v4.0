@@ -3622,7 +3622,7 @@
           "ca3441bc-c2e5-4bd2-bffb-f538878995e0"
         ],
         "settings": {
-          "layout": "default",
+          "layout": "full",
           "bg_color": "",
           "widget_title": "",
           "title_style": "style_1",
@@ -3654,7 +3654,7 @@
           "bg_label": "",
           "text_icon_color": "",
           "menu": "",
-          "enable_banner": true
+          "enable_banner": false
         }
       },
       "1657920595360c8edc": {
@@ -3874,7 +3874,7 @@
               "color": "#ffffff",
               "title": "",
               "des": "",
-              "link_text": "Shop Now",
+              "link_text": "",
               "link": "shopify:\/\/pages\/television-entertainment"
             }
           },
