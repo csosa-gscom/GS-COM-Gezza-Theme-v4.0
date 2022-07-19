@@ -3622,7 +3622,7 @@
           "ca3441bc-c2e5-4bd2-bffb-f538878995e0"
         ],
         "settings": {
-          "layout": "full",
+          "layout": "default",
           "bg_color": "",
           "widget_title": "",
           "title_style": "style_1",
@@ -3654,7 +3654,7 @@
           "bg_label": "",
           "text_icon_color": "",
           "menu": "",
-          "enable_banner": false
+          "enable_banner": true
         }
       },
       "1657920595360c8edc": {
