@@ -3855,7 +3855,6 @@
       },
       "16579258947340c0fc": {
         "type": "home-custom-sub-banner-3",
-        "disabled": true,
         "blocks": {
           "16579258947340c0fc-0": {
             "type": "image",
@@ -3908,7 +3907,7 @@
           "text_transform_title": "capitalize",
           "title_style": "style_1",
           "widget_des": "",
-          "bg_color_style_3": "rgba(0,0,0,0)",
+          "bg_color_style_3": "#fefeff",
           "fontsize_text": "30px",
           "fontsize_text_mb": "30px",
           "font_weight_text": "700",
@@ -4276,6 +4275,61 @@
           "margin_bottom_mb": 0,
           "margin_bottom": 0
         }
+      },
+      "16582624527bd681a8": {
+        "type": "home-custom-block-sub-banner",
+        "disabled": true,
+        "blocks": {
+          "16582624527bd681a8-0": {
+            "type": "oneImage",
+            "settings": {
+              "title": "Editor’s Pick",
+              "color_title": "#fff",
+              "button": "Shop Now",
+              "link": "",
+              "bg_button": "#fff",
+              "border_button": "#fff",
+              "color_button": "#232323"
+            }
+          },
+          "16582624527bd681a8-1": {
+            "type": "oneImage",
+            "settings": {
+              "title": "Editor’s Pick",
+              "color_title": "#fff",
+              "button": "Shop Now",
+              "link": "",
+              "bg_button": "#fff",
+              "border_button": "#fff",
+              "color_button": "#232323"
+            }
+          }
+        },
+        "block_order": [
+          "16582624527bd681a8-0",
+          "16582624527bd681a8-1"
+        ],
+        "settings": {
+          "display_sub_banner": true,
+          "layout": "default",
+          "style_layout": "style_3",
+          "title": "",
+          "title_style": "style_1",
+          "color_title": "#232323",
+          "font_size_title": "16px",
+          "font_size_title_mb": "",
+          "font_weight_title": "700",
+          "text_transform_title": "capitalize",
+          "desc": "",
+          "display_padding": true,
+          "block_des": "",
+          "bg_color_style_3": "#fefeff",
+          "desc_alignment": "center",
+          "font_size_title_item": "16px",
+          "margin_bottom_mb": 20,
+          "margin_bottom_tab": 20,
+          "margin_bottom": 0
+        }
       }
     },
     "content_for_index": [
@@ -4285,10 +4339,11 @@
       "16579249692b921ab5",
       "1658247458b69fb8ff",
       "1658249899dda7e5db",
+      "16579258947340c0fc",
+      "16582624527bd681a8",
       "16581636530b805c59",
       "16579252809c5ac29a",
-      "16581634257829bc87",
-      "16579258947340c0fc"
+      "16581634257829bc87"
     ]
   },
   "presets": {
