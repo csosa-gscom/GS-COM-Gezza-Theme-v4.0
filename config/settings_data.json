@@ -4240,7 +4240,7 @@
           "6e06e520-2c9e-4519-84f4-672fa57e9d3c"
         ],
         "settings": {
-          "layout": "full",
+          "layout": "default",
           "layout_style": "style_4",
           "display_padding": false,
           "display_slider": false,
