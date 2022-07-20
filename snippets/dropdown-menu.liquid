@@ -1,9 +1,11 @@
 <ul class="site-nav-dropdown">
+    {% comment %}
     <li class="menu-lv-2 hide_pc">
         <a href="{{ link_for_dropdown.url }}">
           <span>{{ 'layout.navigation.menu_all' | t }} {{ link_for_dropdown.title }}</span>
         </a>
     </li>
+    {% endcomment %}
     {% for link_child_item in linklists[link_child].links %}
     <li class="menu-lv-2{% if linklists[link_child_item.handle] != empty %} dropdown{% endif %}">
         <a {% if linklists[link_child_item.handle] != empty %}class="menu__moblie"{% endif %} href="{{ link_child_item.url }}">
@@ -31,11 +33,13 @@
             </div>
             
             <ul class="site-nav-dropdown">
+                {% comment %}
                 <li class="menu-lv-3 hide_pc">
                   <a href="{{ link_child_item.url }}">
                     <span>{{ 'layout.navigation.menu_all' | t }} {{ link_child_item.title }}</span>
                   </a>
                 </li>
+                {% endcomment %}
                 {% for n in linklists[link_child_item.handle].links %}                
                 <li class="menu-lv-3">
                     <a {% if linklists[n.handle] != empty %}class="menu__moblie"{% endif %} href="{{ n.url }}">
