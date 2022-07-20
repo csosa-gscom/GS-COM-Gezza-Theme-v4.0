@@ -3357,28 +3357,28 @@
           "a5bcd5b8-4936-4b46-9283-6b858783f86c": {
             "type": "banner",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Smart_watch_3b5b2e07-6893-44e1-a3c3-92347ee65921.png",
+              "image": "shopify:\/\/shop_images\/monitor_and_accessories_be414d76-e2ec-4fa2-be21-3466b91f62b9.png",
               "link": "shopify:\/\/collections\/smart-watches"
             }
           },
           "f5b2b14f-cacf-4d67-b0d4-fae98e03f9e4": {
             "type": "banner",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Selfie_Stick.png",
+              "image": "shopify:\/\/shop_images\/computer_peripheral_1fcf1622-e709-444c-a715-96e543d0e26d.png",
               "link": "shopify:\/\/collections\/selfie-stick"
             }
           },
           "6dd90962-0a96-4a81-bb85-c701585514dd": {
             "type": "banner",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Speakers.png",
+              "image": "shopify:\/\/shop_images\/printer_scanner_and_supplies_805f602a-642c-42b4-8acd-d3cc2a9b4e60.png",
               "link": "shopify:\/\/collections\/speakers"
             }
           },
           "131e41c1-3e75-4695-858e-34494d3984cc": {
             "type": "banner",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Bags_and_Cases.png",
+              "image": "shopify:\/\/shop_images\/TV_entertainment.png",
               "link": "shopify:\/\/collections\/bags"
             }
           },
@@ -3855,6 +3855,7 @@
       },
       "16579258947340c0fc": {
         "type": "home-custom-sub-banner-3",
+        "disabled": true,
         "blocks": {
           "16579258947340c0fc-0": {
             "type": "image",
@@ -4218,11 +4219,11 @@
             "type": "oneImage",
             "settings": {
               "title": "Editor’s Pick",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "button": "Shop Now",
               "link": "",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           },
@@ -4230,11 +4231,11 @@
             "type": "oneImage",
             "settings": {
               "title": "Editor’s Pick",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "button": "Shop Now",
               "link": "",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           }
