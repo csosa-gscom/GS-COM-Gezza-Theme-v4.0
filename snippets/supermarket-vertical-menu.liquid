@@ -106,7 +106,11 @@ More info on linklists:
             <span class="icon-dropdown" data-toggle-menu-mb>
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
             </span>
-            {% endif %}          
+            {% endif %}
+            
+            {% if linklists[link.handle] != empty %} 
+                <span style="float:right;">></span>
+            {% endif %} 
         </a> 	    
 
         {% if linklists[link.handle] != empty %}
