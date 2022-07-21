@@ -25,7 +25,7 @@
   endif
 -%}
 
-<div class="featured-products{% if section.settings.display_banner %} has-banner{% endif %}{% if section.settings.banner_is == 'right'%} banner-right{% endif %}
+<div style="padding-top:20px" class="featured-products{% if section.settings.display_banner %} has-banner{% endif %}{% if section.settings.banner_is == 'right'%} banner-right{% endif %}
 {{section.settings.layout_style}}" id="featured-products-{{section.id}}" 
 {% unless section.settings.layout_style == 'layout_style_7' %}
 {% unless section.settings.layout_style == 'layout_style_2' %}data-featured-products-section{% endunless %} 
