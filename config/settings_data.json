@@ -4684,6 +4684,56 @@
           "margin_bottom_tab": 30,
           "margin_bottom": 30
         }
+      },
+      "165844079911e8fd84": {
+        "type": "home-featured-products",
+        "settings": {
+          "bg_color": "#fefeff",
+          "layout_style": "layout_style_1",
+          "display_banner": false,
+          "banner_is": "left",
+          "banner_heading": "",
+          "font_size_banner_heading": "40px",
+          "color_banner_heading": "#fff",
+          "banner_sub_heading": "",
+          "font_size_banner_sub_heading": "13px",
+          "color_banner_sub_heading": "#fff",
+          "banner_des": "",
+          "font_size_banner_des": "12px",
+          "color_banner_des": "#fff",
+          "banner_button": "",
+          "link": "",
+          "banner_button_2": "",
+          "link_2": "",
+          "bg_banner_button": "#fff",
+          "border_banner_button": "#fff",
+          "color_banner_button": "#232323",
+          "bg_color_box_style_2": "#ffffff",
+          "border_color_box_style_2": "#bcbcbc",
+          "featured_products_title": "Selfie Sticks and Lights",
+          "color_text_title": "",
+          "font_size_title": "",
+          "font_size_title_mb": "",
+          "text_alignment": "left",
+          "featured_products_des": "",
+          "featured_products_text_link": "View All",
+          "featured_products_link": "shopify:\/\/collections\/selfie-stick",
+          "color_text_link": "#202020",
+          "title_style": "style_4",
+          "show_slider_featured_collection": "selfie-stick",
+          "slider_featured_limit_all": 12,
+          "collection_results_per_row1": "5",
+          "featured_products_title_2": "",
+          "featured_products_text_link_2": "",
+          "featured_products_link_2": "",
+          "show_slider_featured_collection_2": "",
+          "display_list_collection": false,
+          "text_list": "View all categories",
+          "url_list": "",
+          "margin_bottom_mb": 40,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 0
+        }
       }
     },
     "content_for_index": [
@@ -4704,7 +4754,8 @@
       "16579252809c5ac29a",
       "1658417820830eef43",
       "16584215961c3f638c",
-      "16584348627465ee01"
+      "16584348627465ee01",
+      "165844079911e8fd84"
     ]
   },
   "presets": {
