@@ -1,5 +1,5 @@
 {% if section.blocks.size > 0 %}
-<div class="home-custom-block {% if section.settings.layout_style == 'layout_style_2' %} layout_style_2{% endif %}" id="custom-block-{{section.id}}">
+<div style="background-color:#FEFEFF; padding:20px 0px" class="home-custom-block {% if section.settings.layout_style == 'layout_style_2' %} layout_style_2{% endif %}" id="custom-block-{{section.id}}">
     <div class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'full' %}container-fluid{% else %}container-padd60{% endif %}">
         {% if section.settings.widget_title != blank %}
         <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
