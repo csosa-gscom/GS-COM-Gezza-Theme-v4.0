@@ -3378,7 +3378,7 @@
           "131e41c1-3e75-4695-858e-34494d3984cc": {
             "type": "banner",
             "settings": {
-              "image": "shopify:\/\/shop_images\/TV_entertainment.png",
+              "image": "shopify:\/\/shop_images\/Computer_hardware_124f9be9-ffac-496e-8a64-290e0a209775.png",
               "link": "shopify:\/\/collections\/bags"
             }
           },
@@ -4275,19 +4275,19 @@
           "banner_is": "left",
           "banner_heading": "",
           "font_size_banner_heading": "40px",
-          "color_banner_heading": "#fff",
+          "color_banner_heading": "#ffffff",
           "banner_sub_heading": "",
           "font_size_banner_sub_heading": "13px",
-          "color_banner_sub_heading": "#fff",
+          "color_banner_sub_heading": "#ffffff",
           "banner_des": "",
           "font_size_banner_des": "12px",
-          "color_banner_des": "#fff",
+          "color_banner_des": "#ffffff",
           "banner_button": "",
           "link": "",
           "banner_button_2": "Shop Now",
           "link_2": "",
-          "bg_banner_button": "#fff",
-          "border_banner_button": "#fff",
+          "bg_banner_button": "#ffffff",
+          "border_banner_button": "#ffffff",
           "color_banner_button": "#232323",
           "bg_color_box_style_2": "#ffffff",
           "border_color_box_style_2": "#bcbcbc",
@@ -4315,6 +4315,99 @@
           "margin_bottom_tab": 40,
           "margin_bottom": 0
         }
+      },
+      "1658417820830eef43": {
+        "type": "supermarket-product-tabs",
+        "blocks": {
+          "1cf8991d-7a29-4860-8019-f3fa6c307b6c": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "CPU",
+              "collection": "cpu"
+            }
+          },
+          "2fd475e8-aff0-4784-a684-0025e0d69e31": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "Graphics Card",
+              "collection": "video-cards"
+            }
+          },
+          "59d304e2-96bd-4fe0-a803-74412d4fca62": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "Hard Drive",
+              "collection": "hard-drives"
+            }
+          },
+          "178a710b-3d37-404b-a6a8-21abbc05fd15": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "RAM",
+              "collection": "computer-memory"
+            }
+          },
+          "65c848f2-f6cb-4174-b438-942305d24e62": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "Motherboard",
+              "collection": "motherboards"
+            }
+          },
+          "07cd3578-b48c-48a3-a4b5-2fc8f6c0b819": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "Power Supply",
+              "collection": "power-supplies"
+            }
+          },
+          "787eb16f-a916-43f4-ac5b-394ed5659460": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "CASE",
+              "collection": "computer-case"
+            }
+          }
+        },
+        "block_order": [
+          "1cf8991d-7a29-4860-8019-f3fa6c307b6c",
+          "2fd475e8-aff0-4784-a684-0025e0d69e31",
+          "59d304e2-96bd-4fe0-a803-74412d4fca62",
+          "178a710b-3d37-404b-a6a8-21abbc05fd15",
+          "65c848f2-f6cb-4174-b438-942305d24e62",
+          "07cd3578-b48c-48a3-a4b5-2fc8f6c0b819",
+          "787eb16f-a916-43f4-ac5b-394ed5659460"
+        ],
+        "settings": {
+          "featured_products_title": "Computer Hardware",
+          "display_banner": true,
+          "font_size_banner_heading": "30px",
+          "font_size_banner_des": "12px",
+          "bg_banner_button": "#fff",
+          "border_banner_button": "#fff",
+          "color_banner_button": "#232323",
+          "image_1": "shopify:\/\/shop_images\/computer-hardware.png",
+          "banner_heading_1": "",
+          "banner_des_1": "",
+          "banner_button_1": "",
+          "link_1": "",
+          "content_style": "style_1",
+          "color_banner_1": "#fff",
+          "banner_heading_2": "",
+          "banner_des_2": "",
+          "banner_button_2": "",
+          "link_2": "",
+          "color_banner_2": "#fff",
+          "banner_heading_3": "",
+          "banner_des_3": "",
+          "banner_button_3": "",
+          "link_3": "",
+          "color_banner_3": "#fff",
+          "collection_results_per_row": "3",
+          "margin_bottom_mb": 20,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 30
+        }
       }
     },
     "content_for_index": [
@@ -4329,7 +4422,8 @@
       "1658249899dda7e5db",
       "16582624527bd681a8",
       "16581636530b805c59",
-      "16579252809c5ac29a"
+      "16579252809c5ac29a",
+      "1658417820830eef43"
     ]
   },
   "presets": {
