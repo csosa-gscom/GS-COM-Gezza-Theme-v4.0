@@ -4884,6 +4884,82 @@
           "margin_bottom_tab": 40,
           "margin_bottom": 0
         }
+      },
+      "165850816174ae2089": {
+        "type": "home-collections",
+        "blocks": {
+          "165850816174ae2089-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/belize_city.png",
+              "title": "<div style=\"font-size: 22px;\">BELIZE CITY<\/div> <br> <div style=\"font-size: 14px;\"> #8 Baymen Avenue <br> Phone: 223-5128<br> ⠀<br> ⠀  <\/div>",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "165850816174ae2089-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Belmopan.png",
+              "title": "<div style=\"font-size: 22px;\">BELMOPAN<\/div> <br> <div style=\"font-size: 14px;\"> Garden City Plaza, , Unit #16<br> Mountain View Blvd.<br> Phone: 822-2588 <\/div>",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "165850816174ae2089-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/San_Ignaci.png",
+              "title": "<div style=\"font-size: 22px;\">SAN IGNACIO<\/div> <br> <div style=\"font-size: 14px;\"> #57 Joseph Andrews Drive <br> Phone: 824-3842<br>⠀ <\/div>",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "165850816174ae2089-3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/OrangeWalk.png",
+              "title": "<div style=\"font-size: 22px;\">ORANGEWALK<\/div> <br> <div style=\"font-size: 14px;\"> #2 Bethias Lane<br> Phone: 322-2226<br>⠀ <\/div>",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "165850816174ae2089-4": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Coming_Soon.png",
+              "title": "<div style=\"font-size: 22px;\">COMING SOON<\/div> <br> <div style=\"font-size: 14px;\">     ⠀<br><br>⠀ <\/div>",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "165850816174ae2089-0",
+          "165850816174ae2089-1",
+          "165850816174ae2089-2",
+          "165850816174ae2089-3",
+          "165850816174ae2089-4"
+        ],
+        "settings": {
+          "title": "STORE LOCATIONS",
+          "title_style": "style_2",
+          "layout": "default",
+          "content_style": "style_1",
+          "bg_color": "#ffffff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "5",
+          "btn_view_all": "",
+          "link_view_all": "",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 23
+        }
       }
     },
     "content_for_index": [
@@ -4908,7 +4984,8 @@
       "16584215961c3f638c",
       "1658417820830eef43",
       "165850704750d5a9fc",
-      "165844079911e8fd84"
+      "165844079911e8fd84",
+      "165850816174ae2089"
     ]
   },
   "presets": {
