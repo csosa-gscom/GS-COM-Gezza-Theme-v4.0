@@ -4317,7 +4317,7 @@
         }
       },
       "1658417820830eef43": {
-        "type": "supermarket-product-tabs",
+        "type": "supermarket-product-tabs-2",
         "blocks": {
           "1cf8991d-7a29-4860-8019-f3fa6c307b6c": {
             "type": "ProductTabs",
