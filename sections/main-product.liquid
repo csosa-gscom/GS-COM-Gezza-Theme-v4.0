@@ -163,13 +163,13 @@ endfor
                   if(inventoryQuantity > 0 && inventoryQuantity <= max_stock){
                       var text_stock = window.inventory_text.hotStock.replace('[inventory]', inventoryQuantity);
                       $('[data-stock-hot]').text(text_stock).show();
-                      productInventory.find('span').text(inventoryQuantity + ' ' + window.inventory_text.in_stock);
+                      productInventory.find('span').text(window.inventory_text.in_stock + ' ⦿');
                   }else if (inventoryQuantity > 0) {
-                      productInventory.find('span').text(inventoryQuantity + ' ' + window.inventory_text.in_stock);
+                      productInventory.find('span').text(window.inventory_text.in_stock + ' ⦿');
                       $('[data-stock-hot]').hide();
                   } else{
-                    productInventory.find('span').text(window.inventory_text.out_of_stock);
-                    $('[data-stock-hot]').hide();
+                    productInventory.find('span').text(window.inventory_text.out_of_stock + ' ✖');
+                    $('[data-stock-hot]').hide();      
                   }
                   // Button Text
                   if(inventoryQuantity > 0){
@@ -194,7 +194,7 @@ endfor
                 $('[data-form-notify]').slideDown();
                 var url = window.location.href.split('?variant')[0];
                 $('[data-value-email]').val(url + '?variant=' + variant.id);
-                productInventory.find('span').text(window.inventory_text.out_of_stock);
+                productInventory.find('span').text(window.inventory_text.out_of_stock + ' ✖');
                 $('[data-stock-hot]').hide();
             };
 
