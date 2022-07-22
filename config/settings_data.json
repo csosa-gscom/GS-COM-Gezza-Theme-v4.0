@@ -4516,7 +4516,7 @@
         }
       },
       "16584287082a2eb243": {
-        "type": "home-custom-block-baner",
+        "type": "home-custom-block-baner-2",
         "blocks": {
           "16584287082a2eb243-0": {
             "type": "largeImg",
@@ -4626,7 +4626,7 @@
         }
       },
       "1658440190b835c3e0": {
-        "type": "home-custom-block-baner",
+        "type": "home-custom-block-baner-2",
         "blocks": {
           "1658440190b835c3e0-0": {
             "type": "largeImg",
