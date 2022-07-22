@@ -3924,7 +3924,7 @@
           "bg_color": "#fefeff",
           "layout_style": "layout_style_5",
           "display_banner": true,
-          "banner_is": "right",
+          "banner_is": "left",
           "image": "shopify:\/\/shop_images\/furniture-featured-products.png",
           "banner_heading": "",
           "font_size_banner_heading": "40px",
