@@ -527,17 +527,7 @@
                         </div>
 
                       </div>
-                      <div class="checkbox-group">
-                          <input class="conditions" type="checkbox" name="conditions">
-                          <label class="title" for="conditions">
-                              {{settings.checkbox_text}}
-                          </label>
-                          {% if settings.terms_conditions_text_link != blank %}
-                          <a data-toggle="modal" data-target="#terms_condition_modal" href="javascript:void(0)" aria-label="link" aria-describedby="a11y-external-message">
-                              {{ settings.terms_conditions_text_link }}
-                          </a>
-                          {% endif %}
-                      </div>
+
                       <div class="btn-checkout show"> 
                       {% if section.settings.enable_payment_button and current_variant.available %}
                           {{ form | payment_button }}
