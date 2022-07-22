@@ -89,7 +89,6 @@
         },
         "bf9a40c8-0a1a-401b-b635-e3f5e99b4673": {
           "type": "recommend",
-          "disabled": true,
           "settings": {
             "display_related_products": true,
             "related_products_title": "Related Products",
