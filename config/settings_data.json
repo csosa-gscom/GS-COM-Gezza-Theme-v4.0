@@ -219,7 +219,7 @@
     "before_you_leave_bg": "shopify:\/\/shop_images\/banner-custom-suppermarket-mobile-1.jpg",
     "before_you_leave_des": "<p><strong>Before you leave...<\/strong><\/p><p>Take 20% off your first order<\/p><p><a href=\"https:\/\/gymuso-theme.myshopify.com\/admin\/themes\/94488690824\/editor\" title=\"#\"><strong>20% off<\/strong><\/a><\/p><p>Enter the code below at checkout to get 20% off your first order.<\/p><p><strong>Sale20<\/strong><\/p>",
     "before_you_leave_products": "collection-sidebar-cart",
-    "enable_free_shipping_message": true,
+    "enable_free_shipping_message": false,
     "color_text_shipping": "#0f0f0f",
     "free_shipping_price": "800",
     "free_shipping_color1": "#f44336",
