@@ -189,16 +189,6 @@
               {% endfor %}
           </div>
       </div>
-      <div class="total">
-        <span class="label">
-          <span>
-            {{ 'cart.label.sub_total' | t }}:
-          </span>
-        </span>
-        <span class="price">
-          {{ cart.total_price | money }}
-        </span> 
-      </div>
 
       {% unless cart.item_count == 0 %}
       {% render 'shipping-rates-calculator' %}
@@ -207,7 +197,7 @@
     {% if section.settings.coupon_code_enable %}
       {% render 'plus_cart_discount_code' %}
     {% endif %}
-    <div class="grouped-bottom">
+    <div class="grouped-bottom" style="border-top:none;">
       <div class="total">
         <span class="label">
           <span>
