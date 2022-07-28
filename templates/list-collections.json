@@ -1,1 +1,608 @@
-{"sections":{"main":{"type":"main-list-collections","blocks":{"307ce11e-4d2b-4852-a057-df936d11e6d7":{"type":"sidebar_product","settings":{"display_sidebar":false,"show_sidebar":"left","enable_categories":true,"title_categories":"","style_categories":"style_show_all","link_list":"main-menu","enable_product":true,"title_product":"Featured Product","collection":"collection-1","limit":"8","enable_img_1":true,"link_img_1":"","enable_img_2":true,"link_img_2":"","enable_custom_block":true,"title_custom_block":"Custom Block","quote_custom_block":"<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>"}},"a41b1061-7460-4eb7-8afe-40c5f260dd4b":{"type":"collection_list","settings":{"collection":"cosmopolis","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#ffffff"}},"26f450bd-ad83-4513-8d20-34b652a7c5de":{"type":"collection_list","settings":{"collection":"suito","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#ffffff"}},"5b921185-959a-425c-94ff-34a47e3af093":{"type":"collection_list","settings":{"collection":"milancelos","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#ffffff"}},"6d9d0e3f-857a-42ee-a2a3-8e39985f8446":{"type":"collection_list","settings":{"collection":"blazero","display_countdow":true,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#ffffff"}},"9b471744-8a01-4d16-9825-9bf3276d32e8":{"type":"collection_list","settings":{"collection":"glamos","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#ffffff"}},"00e41c7b-6f27-446d-a5d8-3b4128d07da0":{"type":"collection_list","settings":{"collection":"metropolis","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#ffffff"}},"6e183af8-20a4-4a9e-9678-c0f05f383631":{"type":"collection_list","settings":{"collection":"valkyrio","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#fff"}},"1067d629-245a-4169-a257-1744429518ea":{"type":"collection_list","settings":{"collection":"scarvero","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#fff"}},"1e6c3edb-ed9a-4648-946e-de70582832eb":{"type":"collection_list","settings":{"collection":"congue","display_countdow":false,"title":"Special Offers","des":"Sale up to 60% off on selected items. End ins:","countdown":"2020\/01\/7 0:0:00","color":"#fff"}}},"block_order":["307ce11e-4d2b-4852-a057-df936d11e6d7","a41b1061-7460-4eb7-8afe-40c5f260dd4b","26f450bd-ad83-4513-8d20-34b652a7c5de","5b921185-959a-425c-94ff-34a47e3af093","6d9d0e3f-857a-42ee-a2a3-8e39985f8446","9b471744-8a01-4d16-9825-9bf3276d32e8","00e41c7b-6f27-446d-a5d8-3b4128d07da0","6e183af8-20a4-4a9e-9678-c0f05f383631","1067d629-245a-4169-a257-1744429518ea","1e6c3edb-ed9a-4648-946e-de70582832eb"],"settings":{"list_collection_results_per_row":"3","list_collection_title_size":"20","style_categories":"style_little","bg_color":"#fafafa"}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "a41b1061-7460-4eb7-8afe-40c5f260dd4b": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "access-point",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "26f450bd-ad83-4513-8d20-34b652a7c5de": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "adapter",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "5b921185-959a-425c-94ff-34a47e3af093": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "bags",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "6d9d0e3f-857a-42ee-a2a3-8e39985f8446": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "barcode-scanners",
+            "display_countdow": true,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "9b471744-8a01-4d16-9825-9bf3276d32e8": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "brackets",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "00e41c7b-6f27-446d-a5d8-3b4128d07da0": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "cable",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "6e183af8-20a4-4a9e-9678-c0f05f383631": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "car-charger",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "1067d629-245a-4169-a257-1744429518ea": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "cash-drawers",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "1e6c3edb-ed9a-4648-946e-de70582832eb": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "charging-station",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "4d78af42-5a76-4961-b7f0-75186a1619bf": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "cleaning",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "1c052ab7-1fa7-4596-b35a-654f748256e2": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "computer-case",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "04c8cd58-dcd8-4ca1-83e0-497cc37cb7ee": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "computer-memory",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "e2e0aa78-a4c2-4b69-a4b4-3651dfec9fa2": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "cooling-pad",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "114eed29-dd6a-4bd3-a99a-9f85ff753757": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "cpu",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "ec249071-34d5-4762-84f2-321e03e1e1a5": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "desktops",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "5b62fc03-04da-4ff0-ada8-f430d685107e": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "earbuds",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "a3a34f92-0031-453a-a031-4f84522fd514": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "desktop-switchs",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "8c6a06b3-f89e-47e9-ac3b-c58f45c8cd9d": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "fans-cpu-coolers",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "10b1d884-df27-457c-a5e9-8892e2e0e320": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "flash-drives",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "d25fbc54-5da6-46a9-b519-3f9cf6c1df8c": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "furniture",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "d5f40f5b-8bcf-4ccc-af4c-754d54085a26": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "gaming",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "30c55008-1d8f-4715-bb2e-7a2c1a1e7a4a": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "video-cards",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "93ba15f9-035d-4275-a44f-12285ff3eb28": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "hard-drive-enclosure",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "187bb457-aa8a-4899-bec7-173fa8b3564b": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "hard-drives",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "6c753754-7671-4bfd-a174-de2d47dc1bb4": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "headphones",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "1fbda435-9468-4212-9a00-59a27efa8f43": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "headset-stand",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "f5359cf7-30bd-45f6-8788-bada6f67d945": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "inks",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "119f0750-d371-446b-b9b7-2d3b655d6113": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "intercoms",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "b1b3e2a0-c8c9-4295-8965-10c672b1bd22": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "keyboards",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "a9e8712b-be24-41dd-bdd1-b4079e883b7d": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "laptops",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "bd26aa16-128f-4096-acd5-d881bffd945c": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "mouse",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "68751dd5-5f04-4593-855e-83e49b319d51": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "microphone",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "98fe7416-2f86-4179-9d1d-94c98d263392": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "monitors",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "7d58319a-5faf-4cd1-8287-83fa1802388b": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "motherboards",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "45647843-5180-4d48-b218-ba129f672286": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "mousepads",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "fd0a4053-9c1d-4f38-9a03-97718a54327a": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "network-ethernet-cable",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "382a2c72-acea-4ef6-9c53-f27a1b6b5ede": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "network-patch-panel",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "34489a66-8a61-4f19-a4f2-bf14ee1cd600": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "networking-tools",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "ef8831b4-2d06-43e3-bb41-d816acbf52f7": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "phone-charger",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "bee61040-503b-40d4-8ccd-8e0b9239854a": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "photo-paper",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "0a5b9637-c4c4-488d-8653-b63cdebe2405": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "pos-monitors-and-displays",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "b15d2c59-7b51-4477-91ba-b7e9643b4ca6": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "power-banks",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "445824e3-ea22-47ce-af16-b62e198ee6a2": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "power-over-thernet-poe",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "6b33d038-5d27-4532-8547-a5c352dec43c": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "power-supplies",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "96cccfea-24fb-448c-9f07-054a4c42c421": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "printers",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "885146a2-593f-4213-b416-c0fecafc0373": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "projector",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "e160a29a-68d7-4734-9e09-b75abbf075cb": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "range-extenders",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "2aea5a7a-dc40-463d-ae85-3e568b074757": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "receipt-printers",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        },
+        "3a8f5451-d38c-4931-b693-ed4023b33f4c": {
+          "type": "collection_list",
+          "settings": {
+            "collection": "rj45-connectors-accesories",
+            "display_countdow": false,
+            "title": "Special Offers",
+            "des": "Sale up to 60% off on selected items. End ins:",
+            "countdown": "2020\/01\/7 0:0:00",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "a41b1061-7460-4eb7-8afe-40c5f260dd4b",
+        "26f450bd-ad83-4513-8d20-34b652a7c5de",
+        "5b921185-959a-425c-94ff-34a47e3af093",
+        "6d9d0e3f-857a-42ee-a2a3-8e39985f8446",
+        "9b471744-8a01-4d16-9825-9bf3276d32e8",
+        "00e41c7b-6f27-446d-a5d8-3b4128d07da0",
+        "6e183af8-20a4-4a9e-9678-c0f05f383631",
+        "1067d629-245a-4169-a257-1744429518ea",
+        "1e6c3edb-ed9a-4648-946e-de70582832eb",
+        "4d78af42-5a76-4961-b7f0-75186a1619bf",
+        "1c052ab7-1fa7-4596-b35a-654f748256e2",
+        "04c8cd58-dcd8-4ca1-83e0-497cc37cb7ee",
+        "e2e0aa78-a4c2-4b69-a4b4-3651dfec9fa2",
+        "114eed29-dd6a-4bd3-a99a-9f85ff753757",
+        "ec249071-34d5-4762-84f2-321e03e1e1a5",
+        "5b62fc03-04da-4ff0-ada8-f430d685107e",
+        "a3a34f92-0031-453a-a031-4f84522fd514",
+        "8c6a06b3-f89e-47e9-ac3b-c58f45c8cd9d",
+        "10b1d884-df27-457c-a5e9-8892e2e0e320",
+        "d25fbc54-5da6-46a9-b519-3f9cf6c1df8c",
+        "d5f40f5b-8bcf-4ccc-af4c-754d54085a26",
+        "30c55008-1d8f-4715-bb2e-7a2c1a1e7a4a",
+        "93ba15f9-035d-4275-a44f-12285ff3eb28",
+        "187bb457-aa8a-4899-bec7-173fa8b3564b",
+        "6c753754-7671-4bfd-a174-de2d47dc1bb4",
+        "1fbda435-9468-4212-9a00-59a27efa8f43",
+        "f5359cf7-30bd-45f6-8788-bada6f67d945",
+        "119f0750-d371-446b-b9b7-2d3b655d6113",
+        "b1b3e2a0-c8c9-4295-8965-10c672b1bd22",
+        "a9e8712b-be24-41dd-bdd1-b4079e883b7d",
+        "bd26aa16-128f-4096-acd5-d881bffd945c",
+        "68751dd5-5f04-4593-855e-83e49b319d51",
+        "98fe7416-2f86-4179-9d1d-94c98d263392",
+        "7d58319a-5faf-4cd1-8287-83fa1802388b",
+        "45647843-5180-4d48-b218-ba129f672286",
+        "fd0a4053-9c1d-4f38-9a03-97718a54327a",
+        "382a2c72-acea-4ef6-9c53-f27a1b6b5ede",
+        "34489a66-8a61-4f19-a4f2-bf14ee1cd600",
+        "ef8831b4-2d06-43e3-bb41-d816acbf52f7",
+        "bee61040-503b-40d4-8ccd-8e0b9239854a",
+        "0a5b9637-c4c4-488d-8653-b63cdebe2405",
+        "b15d2c59-7b51-4477-91ba-b7e9643b4ca6",
+        "445824e3-ea22-47ce-af16-b62e198ee6a2",
+        "6b33d038-5d27-4532-8547-a5c352dec43c",
+        "96cccfea-24fb-448c-9f07-054a4c42c421",
+        "885146a2-593f-4213-b416-c0fecafc0373",
+        "e160a29a-68d7-4734-9e09-b75abbf075cb",
+        "2aea5a7a-dc40-463d-ae85-3e568b074757",
+        "3a8f5451-d38c-4931-b693-ed4023b33f4c"
+      ],
+      "settings": {
+        "list_collection_results_per_row": "4",
+        "list_collection_title_size": "20",
+        "style_categories": "style_little",
+        "bg_color": "#fafafa"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
