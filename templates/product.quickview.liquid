@@ -254,13 +254,17 @@
                 <span>
                 {% if current_variant.inventory_management %}
                 {% assign first_inventory = current_variant.inventory_quantity %}
-                {% if first_inventory > 0 %}
-                <span style="color:green;font-weight: bold;">{{ 'products.product.in_stock' | t }}</span><span style="color:green"> ⦿</span>
+                    {% if first_inventory > 50 %}
+                        <span style="color:green;font-weight: bold;">Many in Stock</span><span style="color:green"> ⦿</span>
+                    {% elsif first_inventory > 5 %}
+                        <span style="color:green;font-weight: bold;">In Stock</span><span style="color:green"> ⦿</span>
+                    {% elsif first_inventory > 0 %}
+                        <span style="color:green;font-weight: bold;">Few in Stock </span><span style="color:green"> ⦿</span>
+                    {% else %}
+                        <span style="color:red;font-weight: bold;">{{ 'products.product.out_of_stock' | t }}</span><span style="color:red"> ✖</span>
+                    {% endif %}
                 {% else %}
-                <span style="color:red;font-weight: bold;">{{ 'products.product.out_of_stock' | t }}</span><span style="color:red"> ✖</span>
-                {% endif %}
-                {% else %}
-                <span style="color:green;font-weight: bold;">{{ 'products.product.many_in_stock' | t }}</span><span style="color:green"> ⦿</span>
+                    <span style="color:green;font-weight: bold;">{{ 'products.product.many_in_stock' | t }}</span><span style="color:green"> ⦿</span>
                 {% endif %}
                 </span>
             </div>
@@ -444,7 +448,7 @@
                 <div class="hot_stock" data-stock-hot data-value="{{max_stock}}">
                     {% if current_variant.inventory_management %}
                         {% if current_variant.inventory_quantity > 0 and current_variant.inventory_quantity <= max_stock %}
-                        {{ "products.product.stock_hot" | t | replace: '[inventory]', current_variant.inventory_quantity }}
+                        {{ "products.product.stock_hot" | t | replace: '[inventory]',current_variant.inventory_quantity}}
                         {% endif %}
                     {% endif %}
                 </div>

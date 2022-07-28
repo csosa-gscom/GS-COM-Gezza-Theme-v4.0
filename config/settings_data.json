@@ -93,7 +93,7 @@
     "text_quickview_product_sku": "Product Code:",
     "display_quickview_availability": false,
     "quickview_text_availability": "Availability:",
-    "display_quickview_product_type": false,
+    "display_quickview_product_type": true,
     "quickview_text_product_type": "Product Type",
     "quickview_text_countdown": "Limited-Time Offers, End in:",
     "display_quickview_short_desc": true,

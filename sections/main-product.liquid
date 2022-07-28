@@ -160,13 +160,16 @@ endfor
                     }
                   }
                   // Hot stock
-                  if(inventoryQuantity > 0 && inventoryQuantity <= max_stock){
+                  if(inventoryQuantity > 50){
+                    productInventory.find('span').text('Many in Stock ⦿');
+                      $('[data-stock-hot]').hide();
+                  }else if (inventoryQuantity > 5) {
+                      productInventory.find('span').text('In Stock ⦿');
+                      $('[data-stock-hot]').hide();
+                  }else if (inventoryQuantity > 0 && inventoryQuantity <= max_stock) {
+                      productInventory.find('span').text('Few in Stock ⦿');
                       var text_stock = window.inventory_text.hotStock.replace('[inventory]', inventoryQuantity);
                       $('[data-stock-hot]').text(text_stock).show();
-                      productInventory.find('span').text(window.inventory_text.in_stock + ' ⦿');
-                  }else if (inventoryQuantity > 0) {
-                      productInventory.find('span').text(window.inventory_text.in_stock + ' ⦿');
-                      $('[data-stock-hot]').hide();
                   } else{
                     productInventory.find('span').text(window.inventory_text.out_of_stock + ' ✖');
                     $('[data-stock-hot]').hide();      
