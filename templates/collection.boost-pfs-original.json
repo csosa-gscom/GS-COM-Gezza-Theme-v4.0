@@ -1,7 +1,29 @@
 {
   "sections": {
     "main": {
-      "type": "main-collection",
+      "type": "main-collection-boost-pfs-original",
+      "blocks": {
+        "7eca8df8-341e-467f-be11-321030593b50": {
+          "type": "header",
+          "settings": {
+            "display_collection_image": true,
+            "collection_header_layout": "default",
+            "collection_header_style": "style_1",
+            "display_collection_des": true,
+            "color_wrapper": "#202020",
+            "color_wrapper_mb": "#202020",
+            "bg_color_content": "#fff",
+            "border_color_content": "#bcbcbc",
+            "height_img": "240px",
+            "enable_sub": false,
+            "sub_title": "Jump to:",
+            "sub_style": "style_1"
+          }
+        }
+      },
+      "block_order": [
+        "7eca8df8-341e-467f-be11-321030593b50"
+      ],
       "settings": {
         "limited_view": true,
         "view_as_enable": true,

@@ -1,140 +1,210 @@
-{% assign grid_results = true %}
+{%- assign filter_tree_vertical_style = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'filterTreeVerticalStyle":"' | last | split: '","' | first | strip -%}
+{%- assign enable_filter_sticky_d = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'stickyFilterOnDesktop":' | last | split: ',' | first | strip -%}
+{%- if filter_tree_vertical_style == 'style-off-canvas' or filter_tree_vertical_style == 'style-expand' -%}
+{%- assign enable_filter_tree_button_desktop_v = true -%}
+{%- else -%}
+{%- assign enable_filter_tree_button_desktop_v = false -%}
+{%- endif -%}
 
-{% case section.settings.search_results_per_row %}
-{% when '1' %}
-    {%- assign grid_item_width = 'col-12' -%}
-  {%- assign rows = 'products-list' -%}
-
-  {% when '2' %}
-    {%- assign grid_item_width = 'col-6' -%}
-  {%- assign rows = 'products-grid' -%}
-
-  {% when '3' %}
-    {%- assign grid_item_width = 'col-6 col-md-4' -%}
-  {%- assign rows = 'products-grid' -%}
-
-  {% when '4' %}
-    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col4' -%}
-  {%- assign rows = 'products-grid' -%}
-
-  {% when '5' %}
-    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
-  {%- assign rows = 'products-grid' -%}
-{% endcase %}
-
-<div class="search-page collection-template" data-search-page>
+<div class="search-page collection-template collection-template-default" data-search-page>
   <div class="container">
-    {% if search.performed %}
-
-    {% comment %}
-    Avoid accessing search.results before the opening paginate tag.
-    If you do, the pagination of results will be broken.
-    {% endcomment %}
-
-    {% paginate search.results by 15 %}
-
-    {% comment %}
-    We don't have any results to show. Feel free to show off featured products
-    or suggested searches here.
-    {% endcomment %}
-
-    {% if search.results_count == 0 %}
     <header class="page-header">
-      <h2>
-        {% render 'multilang' with settings.search_1 %}
-        <strong> &nbsp;"{{ search.terms }}"&nbsp; </strong>
-        {% render 'multilang' with settings.search_2 %}
-      </h2>
+      <h2 class="boost-pfs-search-result-header">{% include 'boost-pfs-filter-skeleton', width: 2 %}</h2>
     </header>
 
-    {% else %}
+    <div class="boost-pfs-search-result-toolbar">
+      <div class="boost-pfs-search-result-item">
+        <ul class="boost-pfs-search-result-panel-controls">
+          <li>{% include 'boost-pfs-filter-skeleton', width: 2 %}</li>
+          <li>{% include 'boost-pfs-filter-skeleton', width: 2 %}</li>
+          <li>{% include 'boost-pfs-filter-skeleton', width: 1 %}</li>
+        </ul>
+      </div>
+      <div class="boost-pfs-search-result-item">
+        <span class="boost-pfs-search-total-result">
+          {% include 'boost-pfs-filter-skeleton', width: 2 %}
+        </span>
+      </div>
+    </div>
 
-    <header class="page-header">
-      <h2>
-        {% render 'multilang' with settings.search_3 %}
-        <strong> &nbsp;"{{ search.terms }}"&nbsp; </strong>
-        {% render 'multilang' with settings.search_4 %}
-      </h2>
-    </header>
-
-    <div class="row">
-      {% render 'sidebar-search-filter' %}
-      <div class="col-12 col-xl-9 col-main">
-        <div id="CollectionProductGrid">
-        {% if grid_results == false %}
-        <div class="product-collection products-list product-search row">
-          {% for product in search.results %}
-          <div class="grid-item col-12{% if settings.product_image_border%} grid-item-border{% endif %}">
-            {% render 'search-result' with product as product %}
+    <div class="halo-collection-content">
+      <div class="row boost-pfs-filter-wrapper boost-pfs-search-panel-product-show boost-pfs-filter-wrapper">
+        <div class="col-12 col-md-3 boost-pfs-filter-left-col">
+          <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v" data-is-desktop>
+            {%- unless enable_filter_tree_button_desktop_v -%}
+              {% render 'boost-pfs-filter-skeleton', type: 'filter-tree' %}
+            {%- endunless -%}
           </div>
-          {% endfor %}
         </div>
 
-        {% else %}
-          <div data-section-id="{{ section.id }}" data-section-type="collection-template" id="main-collection-product-grid" data-id="{{ section.id }}">
-            <div class="{{ rows }} product-search row product-collection">
-              {% for product in search.results %}
-              <div class="grid-item {{ grid_item_width }} {% if settings.product_image_border%} grid-item-border{% endif %} column-{{settings.popular_products_limit}}">
-                {% if settings.style_product_grid == 'style_product_grid_2' %}
-                  {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
-                {% elsif settings.style_product_grid == 'style_product_grid_3' %}
-                  {% render 'product-grid-item-style-3' with product as product, serial: forloop.index %}
-                {% elsif settings.style_product_grid == 'style_product_grid_4' %}
-                  {% render 'product-grid-item-style-4' with product as product, serial: forloop.index %}
-                {% elsif settings.style_product_grid == 'style_product_grid_6' %}
-                  {% render 'product-grid-item-style-6' with product as product, serial: forloop.index %}  
-                {% elsif settings.style_product_grid == 'style_product_grid_7' %}
-                  {% render 'product-grid-item-style-7' with product as product, serial: forloop.index %}  
-                {% else %}
-                  {% render 'product-grid-item' with product as product, serial: forloop.index %}
-                {% endif %}
+        <div class="col-12 col-md-9 boost-pfs-filter-right-col">
+          <div class="toolbar">
+            <div class="column-left">
+              {%- if enable_filter_tree_button_desktop_v -%}
+                <div class="boost-pfs-filter-tree-desktop-button">{%- render 'boost-pfs-filter-skeleton', type: 'button' -%}</div>
+              {%- endif -%}
+
+              <div class="boost-pfs-filter-tree-mobile-button">{% render 'boost-pfs-filter-skeleton', type: 'button' %}</div>
+
+              <div class="sidebar-label">
+                
+                <span class="sidebar_more" {% if settings.enable_multilang %} data-translate="collections.sidebar.sidebar_more" {% endif %}>
+                  {{ 'collections.sidebar.sidebar_more' | t }}
+                </span>
               </div>
-              {% endfor %}
             </div>
-            {% if paginate.pages > 1 %}
-            <div class="padding">
-              {% render 'pagination-page' paginate: paginate %}
+
+            <div class="column-right">
+              <div class="boost-pfs-filter-toolbar-item text-right boost-pfs-filter-custom-sorting toolbar-col boost-pfs-filter-top-sorting">{% include 'boost-pfs-filter-skeleton', width: 2 %}</div>
             </div>
-            {% endif %}
           </div>
-        {% endif %}
+          <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v" data-is-mobile>{% render 'boost-pfs-filter-skeleton', type: 'filter-tree-v'  %}</div>
+
+          <div class="boost-pfs-filter-products product-collection products-grid row">
+            {% comment %} Fix Shopify search term report {% endcomment %}
+            {% paginate search.results by 2 %}
+              {% if search.performed %}
+                {% for item in search.results %}
+                  <div class="row" style="display: none !important"></div>
+                {% endfor %}
+              {% endif %}
+            {% endpaginate %}
+          </div>
+
+          <div class="padding">
+            <div class="infinite-scrolling">
+              <div class="boost-pfs-filter-load-more"></div>
+            </div>
+            <div class="toolbar-bottom" id="toolbar-bottom">
+              <p class="page-total boost-pfs-filter-total-products"></p>
+              <ul class="boost-pfs-filter-pagination-page boost-pfs-filter-bottom-pagination">
+                {% render 'pagination-page' paginate: paginate %}
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="boost-pfs-search-result-wrap boost-hidden padding">
+        <div class="boost-pfs-search-result-collections">
+          <div class="boost-pfs-search-result-list-item">
+            <a href="#">{% include 'boost-pfs-filter-skeleton', width: 4 %}</a>
+          </div>
+          <div class="boost-pfs-search-result-list-item">
+            <a href="#">{% include 'boost-pfs-filter-skeleton', width: 3 %}</a>
+          </div>
+          <div class="boost-pfs-search-result-list-item">
+            <a href="#">{% include 'boost-pfs-filter-skeleton', width: 4 %}</a>
+          </div>
+        </div>
+        <div class="padding">
+          <div class="toolbar-bottom">
+            <div class="boost-pfs-search-result-collection-pagination">{% include 'boost-pfs-filter-skeleton', width: 4 %}</div>
+          </div>
+        </div>
+      </div>
+      <div class="boost-pfs-search-result-wrap boost-hidden">
+        <div class="boost-pfs-search-result-pages">
+          <div class="boost-pfs-search-result-list-item">
+            <a href="#">{% include 'boost-pfs-filter-skeleton', width: 4 %}</a>
+          </div>
+          <div class="boost-pfs-search-result-list-item">
+            <a href="#">{% include 'boost-pfs-filter-skeleton', width: 3 %}</a>
+          </div>
+          <div class="boost-pfs-search-result-list-item">
+            <a href="#">{% include 'boost-pfs-filter-skeleton', width: 4 %}</a>
+          </div>
+        </div>
+        <div class="padding">
+          <div class="toolbar-bottom">
+            <div class="boost-pfs-search-result-page-pagination">{% include 'boost-pfs-filter-skeleton', width: 4 %}</div>
+          </div>
         </div>
       </div>
     </div>
-    {% endif %}
-
-    
-    {% endpaginate %}
-
-    {% else %}
-
-    {% comment %}
-    If search.performed is false, someone either accessed the page without
-    the q parameter, or it was blank.
-    Be sure to show a search form here, along with anything else you want to showcase.
-    {% endcomment %}
-
-    <header class="page-header">
-      <h2 style="text-align:center" {% if settings.enable_multilang %}data-translate="general.search.title"{%endif%}>{{ 'general.search.title' | t }}</h2>
-      <div class="header-search__form">
-          <form action="/search" method="get" class="search-bar" role="search">
-              <input type="hidden" name="type" value="product">
-
-              <input type="search" name="q"
-                  {% if settings.enable_multilang %} data-translate="general.search.placeholder" translate-item="placeholder"{% endif %}
-                  placeholder="{{ 'general.search.placeholder' | t }}"
-                  class="input-group-field" aria-label="Search Site" autocomplete="off">
-
-              <button type="submit" class="btn icon-search">
-                  {% render 'icon-search' %}
-              </button>
-          </form>
-      </div>
-    </header>
-    {% endif %}
   </div>
 </div>
+
+<script>
+  // Declare boostPFSThemeConfig variable
+  var boostPFSThemeConfig = {
+    label: {
+      sale: {{ 'products.product.sale' | t | json }},
+      sold_out: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      from_price: {{ 'products.product.from' | t | json }},
+      select_options: {{ 'products.product.select_options' | t | json }},
+      add_to_cart: {{ 'products.product.add_to_cart' | t | json}},
+      quick_view: {{ 'products.product.quick_view' | t | json }},
+      add_to_wishlist: {{ 'wishlist.general.add_to_wishlist' | t | json }},
+      wishlist_note: {{ 'wishlist.general.note' | t | json }},
+      view_as: {{ 'collections.toolbar.view_as' | t | json }},
+      grid_view: {{ 'collections.general.grid_view' | t | json }},
+      list_view: {{ 'collections.general.list_view' | t | json }},
+      toolbar_next: {{ 'collections.toolbar.next' | t | json }},
+      toolbar_previous: {{ 'collections.toolbar.previous' | t | json }},
+      toolbar_showing: {{ 'collections.toolbar.showing' | t | json }},
+      toolbar_of: {{ 'collections.toolbar.of' | t | json }},
+      size:  {{ 'products.product.size' | t | json }},
+    },
+    custom: {
+      products_per_page: {% if product_per_page %} {{ product_per_page | json }} {% else %} 24 {% endif %},
+      products_per_row: {% if section.settings.collection_results_per_row %} {{ section.settings.collection_results_per_row }} {% else %} 4 {% endif %},
+      grid_item_width: {% if grid_item_width %} {{ grid_item_width | json}} {% else %} "col-md-3" {% endif %},
+      image_size: {% if image_size %} {{ image_size | json }} {% else %} "250x" {% endif %},
+      product_image_border: {% if settings.product_image_border %} {{ settings.product_image_border | json }} {% else %} false  {% endif %},
+      product_image_crop: {% if settings.product_image_crop %} {{ settings.product_image_crop | json }} {% else %} false {% endif %},
+      display_product_reviews: {% if settings.display_product_reviews %} {{ settings.display_product_reviews | json }} {% else %} false {% endif %},
+      display_item_swatch: {% if settings.display_item_swatch %} {{ settings.display_item_swatch | json }} {% else %} false {% endif %},
+      time_lazy_load: {% if settings.time_lazy_load %} {{ settings.time_lazy_load }} {% else %} 100 {% endif %},
+      show_vendor: {% if settings.show_vendor %} {{ settings.show_vendor | json }} {% else %} false {% endif %},
+      enable_quick_view: {% if settings.enable_quick_view %} {{ settings.enable_quick_view | json }} {% else %} false {% endif %},
+      enable_size_swatch: {% if settings.display_item_size %} {{ settings.display_item_size | json }} {% else %} false {% endif %},
+      enable_wishlist: {% if settings.enable_wishlist %} {{ settings.enable_wishlist | json }} {% else %} false {% endif %},
+      display_button: {% if settings.display_button %} {{ settings.display_button | json }} {% else %} false {% endif %},
+      image_swap: {% if settings.image_swap %} {{settings.image_swap | json }} {% else %} false {% endif %},
+      product_image_resize: {% if settings.product_image_resize %} {{ settings.product_image_resize | json }} {% else %} false {% endif %},
+      enable_multilang: {% if settings.enable_multilang %} {{ settings.enable_multilang | json }} {% else %} false {% endif %},
+      style_product_grid: {% if settings.style_product_grid %} {{ settings.style_product_grid | json }} {% else %} "style_product_grid_1" {% endif %}
+    },
+    customer: {
+      tags: {% if customer.tags%} {{ customer.tags | json }} {% else %} [] {% endif %},
+      email: {% if customer.email %} {{ customer.email  | json }} {% else %} '' {% endif %},
+    }
+  };
+
+  // Declare boostPFSTemplate variable
+  var boostPFSTemplate = {
+    'gridBorderClass': 'grid-item-border',
+    'onSaleClass': 'on-sale',
+    'soldOutClass': 'sold-out',
+
+    //Layout
+    'productGridItemHtml': {% render 'boost-pfs-filter-html', layout: 'productGridItemHtml' %},
+    'productGridItem2Html': {% render 'boost-pfs-filter-html', layout: 'productGridItem2Html' %},
+    'productListItemHtml': {% render 'boost-pfs-filter-html', layout: 'productListItemHtml' %},
+    'quickViewHtml': {% render 'boost-pfs-filter-html', layout: 'quickViewHtml' %},
+    'reviewHtml': {% render 'boost-pfs-filter-html', layout: 'reviewHtml' %},
+    'wishlistHtml': {% render 'boost-pfs-filter-html', layout: 'wishlistHtml' %},
+    'showLimitHtml': {% render 'boost-pfs-filter-html', layout: 'showLimitHtml' %},
+
+    // Pagination Template
+    'previousActiveHtml': {% render 'boost-pfs-filter-html', layout: 'previousActiveHtml' %},
+    'previousDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'previousDisabledHtml' %},
+    'nextActiveHtml': {% render 'boost-pfs-filter-html', layout: 'nextActiveHtml' %},
+    'nextDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'nextDisabledHtml' %},
+    'pageItemHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemHtml' %},
+    'pageItemSelectedHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemSelectedHtml' %},
+    'pageItemRemainHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemRemainHtml' %},
+    'paginateHtml': {% render 'boost-pfs-filter-html', layout: 'paginateHtml' %},
+
+    //Sorting
+    'sortingHtml': {% render 'boost-pfs-filter-html', layout: 'sortingHtml' %}
+  }
+</script>
 {% schema %}
+
   {
     "name": "Main Search",
     "max_blocks": 1,

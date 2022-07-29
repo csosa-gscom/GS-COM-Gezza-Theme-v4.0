@@ -1,40 +1,392 @@
-{% if template.suffix == 'right-sidebar' %}
-	{% render 'collection-right-sidebar' %}
-{% elsif template.suffix == 'fullwidth' %}
-	{% render 'collection-fullwidth' %}
-{% elsif template.suffix == 'with-banner' %}
-	{% render 'collection-with-banner' %}
-{% elsif template.suffix == 'mansory' %}
-	{% render 'collection-mansory' %}
-{% elsif template.suffix == 'express-order' %}
-	{% render 'collection-express-order' %}
-{% elsif template.suffix == 'no-sidebar' %}
-	{% render 'collection-no-sidebar' %}
-{% elsif template.suffix == 'skin-1' %}
-	{% render 'collection-skin-1' %}
-{% elsif template.suffix == 'supermarket' %}
-	{% render 'collection-supermarket' %}
-{% else %}
-	{% if settings.category_layout == "default" %} 
-		{% render 'collection-default' %}
-	{% elsif settings.category_layout == "right_sidebar" %}
-		{% render 'collection-right-sidebar' %}
-	{% elsif settings.category_layout == "full_with" %}
-		{% render 'collection-fullwidth' %}
-	{% elsif settings.category_layout == "with_banner" %}
-		{% render 'collection-with-banner' %}
-	{% elsif settings.category_layout == "mansory" %}
-		{% render 'collection-mansory' %}
-	{% elsif settings.category_layout == "express_order" %}
-		{% render 'collection-express-order' %}
-	{% elsif settings.category_layout == "no_sidebar" %}
-		{% render 'collection-no-sidebar' %}
-	{% elsif settings.category_layout == "skin_1" %}
-		{% render 'collection-skin-1' %}
-	{% elsif settings.category_layout == "supermarket" %}
-		{% render 'collection-supermarket' %}
-	{% endif %}
-{% endif %}
+{%- assign filter_tree_vertical_style = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'filterTreeVerticalStyle":"' | last | split: '","' | first | strip -%}
+{%- assign enable_filter_sticky_d = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'stickyFilterOnDesktop":' | last | split: ',' | first | strip -%}
+{%- if filter_tree_vertical_style == 'style-off-canvas' or filter_tree_vertical_style == 'style-expand' -%}
+{%- assign enable_filter_tree_button_desktop_v = true -%}
+{%- else -%}
+{%- assign enable_filter_tree_button_desktop_v = false -%}
+{%- endif -%}
+
+{%- assign boost_settings = shop.metafields.bc-sf-filter.settings -%}
+{%- assign boost_in_collection_search = boost_settings | split: 'enableCollectionSearch":' | last | split: ',"' | first | strip -%}
+
+<div class="collection-template collection-template-default">
+  <div class="container">
+    {% render 'breadcrumb' %}
+    <div class="halo-collection-content">
+      <div class="row">
+        <div class="boost-pfs-filter-wrapper">
+          <div class="shopify-section col-12 col-xl-3 boost-pfs-filter-left-col">
+            <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v" data-is-desktop>
+              {%- unless enable_filter_tree_button_desktop_v -%}
+                {% render 'boost-pfs-filter-skeleton', type: 'filter-tree' %}
+              {%- endunless -%}
+            </div>
+          </div>
+          {% assign product_per_page = section.settings.collection_results_per_page %}
+
+          {% paginate collection.products by product_per_page %}
+
+            {% case section.settings.collection_results_per_row %}
+              {% when '1' %}
+                {%- assign grid_item_width = 'col-12' -%}
+                {%- assign rows = 'products-list' -%}
+
+              {% when '2' %}
+                {%- assign grid_item_width = 'col-6' -%}
+                {%- assign rows = 'products-grid' -%}
+
+              {% when '3' %}
+                {%- assign grid_item_width = 'col-6 col-md-4' -%}
+                {%- assign rows = 'products-grid' -%}
+
+              {% when '4' %}
+                {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+                {%- assign rows = 'products-grid' -%}
+
+              {% when '5' %}
+                {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+                {%- assign rows = 'products-grid' -%}
+            {% endcase %}
+            <div class="shopify-section col-12 col-xl-9 col-main boost-pfs-filter-right-col" id="shopify-section-collection-template-default">
+              {% assign blocks = section.blocks | where: 'type', 'header' %}
+              {% assign block = blocks[0] %}
+              <header class="collection-header collection-header-sections {% if block.settings.collection_header_style == 'style_2' %}layout-header--style2{% endif %}">
+                <div class="relative {% if block.settings.collection_header_layout == 'default' %}container{% endif %}">
+                  {% if block.settings.display_collection_image %}
+
+                    {% if collection.description contains '<img' %}
+                      {%- assign img_url = collection.description | split: '<img' | last | split: '>' | first -%}
+
+                    {% elsif block.settings.collection_image != blank %}
+                      {%- assign img_url = block.settings.collection_image | img_url: 'master' -%}
+
+                    {% endif %}
+
+                    <div class="collection-image">
+                      {% if collection.description contains '<img' or block.settings.collection_image != blank %}
+
+                        {% if collection.description contains '<img' %}
+                          <img {{ img_url }} alt="{{ collection_title }}" class="lazyautosizes lazyloaded" data-sizes="auto"/>
+                        {% else %}
+                          <img data-src="{{ img_url }}" class="lazyload" data-sizes="auto">
+                        {% endif %}
+                      {% endif %}
+
+                      {% if block.settings.collection_header_style == 'style_1' %}
+
+                        <div class="page-header tab-abs {% unless collection.description contains 'img' or block.settings.collection_image != blank %}collection-static{% endunless %}">
+                          <h1 class="boost-pfs-filter-collection-header">
+                            {% render 'multilang' with collection.title %}
+                          </h1>
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  <div class="collection-wrapper page-header {% unless collection.description contains 'img' or block.settings.collection_image != blank %}collection-static{% endunless %}">
+                    <div class="{% if settings.category_layout == "full_with" or template.suffix == 'fullwidth' %}container-padd60{% else %}{% unless block.settings.collection_header_layout == 'default' %}container{% endunless %} container-regular{% endif %}">
+                      {% if block.settings.collection_header_style == 'style_2' %}
+                        <div class="absolute {% unless collection.description contains '<img' or block.settings.collection_image != blank %}no-image{% endunless %}">
+                        {% endif %}
+                        <h1 class="boost-pfs-filter-collection-header">
+                          {% render 'multilang' with collection.title %}
+                        </h1>
+
+                        {% if collection.description != '' and block.settings.display_collection_des %}
+                          <div class="collection-des">
+                            {% if settings.enable_multilang and collection.description contains '[lang2]' %}
+                              <div class="rte lang1 boost-pfs-filter-collection-description">
+                                {{ collection.description | split: '[lang2]' | first | split: '<img' | first }}
+                              </div>
+                              <div class="rte lang2 boost-pfs-filter-collection-description">
+                                {{ collection.description | split: '[lang2]' | last | split: '<img' | first }}
+                              </div>
+                            {% else %}
+                              <div class="rte boost-pfs-filter-collection-description">
+                                {{ collection.description | split: '[lang2]' | first | split: '<img' | first }}
+                              </div>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.collection_header_style == 'style_2' %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+                {% if block.settings.enable_sub and linklists[collection.handle] != blank %}
+                  <div class="sub-collection">
+                    <div class="container">
+                      {% if block.settings.sub_style == 'style_1' %}
+                        <div class="d-flex">
+                          <span>{{block.settings.sub_title}}</span>
+                          <ul class="list-sub-collection {% if block.settings.sub_style == 'style_1' %}sub-collection-style-1{% endif %}">
+                            {% for link in linklists[collection.handle].links %}
+                              <li class="item {% if link.active %}active{% endif %}">
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% else %}
+                        <div class="sub-slider">
+                          <span>{{block.settings.sub_title}}</span>
+                          <div class="list-sub-collection" data-slider-sub-collection>
+                            {% for link in linklists[collection.handle].links %}
+                              <div class="item">
+                                {% assign imgColl = link.object.image | img_url :"210x", format: 'jpg' %}
+                                <a href="{{ link.url }}">
+                                  {% if link.object %}
+                                    <img src="{{ imgColl }}" alt="{{ link.title }}">
+                                  {% endif %}
+                                  <span>{{ link.title }}</span>
+                                </a>
+                              </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endif %}
+              </header>
+              <style>
+                {% if block.settings.display_collection_image %} 
+                  .collection-header h1 span,
+                  .collection-header-sections .collection-des .rte, 
+                  .collection-header-sections .collection-des .rte a, 
+                  .collection-header-sections .collection-des .rte p {
+                    color: {{ block.settings.color_wrapper }};
+                  }
+                  @media (max-width: 1199px) {
+                    .collection-header.collection-header-sections .collection-image .tab-abs:not(.collection-static) {
+                      position: static;
+                      -moz-transform: none;
+                      -o-transform: none;
+                      -ms-transform: none;
+                      -webkit-transform: none;
+                      transform: none;
+                      max-width: initial;
+                      text-align: left;
+                      margin-top: 30px;
+                    }
+                  }
+                  @media(max-width: 1024px) {
+                    .collection-header h1 span,
+                    .collection-header-sections .collection-des .rte, 
+                    .collection-header-sections .collection-des .rte a, 
+                    .collection-header-sections .collection-des .rte p {
+                      color: {{ block.settings.color_wrapper_mb }};
+                    }
+                  }
+                  @media (min-width: 1200px) {
+                    {% if block.settings.collection_header_style == 'style_2' %}
+                      .layout-header--style2 .container .absolute {
+                        background-color: {{ block.settings.bg_color_content }};
+                      }
+                      .layout-header--style2 .container .absolute:before {
+                        border-color: {{ block.settings.border_color_content }};
+                      }
+                      .layout-header--style2 .container .absolute .collection-des a {
+                        color: {{ block.settings.color_wrapper }};
+                      }
+                    {% endif %}
+                  }
+                  @media (min-width: 768px) and (max-width: 1199px) {
+                    {% if block.settings.collection_header_style == 'style_1' %}
+                      .collection-header.collection-header-sections .collection-wrapper h1 {
+                        display: none !important;
+                      }
+                    {% endif %}
+                  }
+                {% endif %}
+              </style>
+              {% if settings.category_layout != "default" %}
+                <style>  
+                  {% if block.settings.display_collection_image %} 
+                  @media (min-width: 768px) {
+                    .collection-header-sections .page-header h1 {
+                      color: {{ block.settings.color_wrapper }};
+                    }
+                    .collection-header-sections .collection-static.page-header h1 {
+                      color: #000;
+                    }
+                  }
+                  {% endif %}
+
+                  @media (min-width: 1200px) {
+                    .collection-header-sections .collection-image img {
+                      height: {{ block.settings.height_img }};
+                    }
+
+                    {% if block.settings.display_collection_image %} 
+                    .collection-header.collection-header-sections {
+                      position: relative;
+                    }
+
+                    {% if block.settings.collection_header_style == 'style_1' %}
+                      .collection-header.collection-header-sections .collection-wrapper:not(.collection-static) {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -moz-transform: translate(-50%, -50%);
+                        -o-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        width: 100%;
+                        max-width: 500px;
+                        margin: 0;
+                      }
+                      {% if settings.layout_style == 'layout_style_fullwidth' %}
+                        .collection-header.collection-header-sections .collection-wrapper:not(.collection-static) {
+                            bottom: 55px;
+                            top: auto;
+                            transform: translate(-50%, 0);
+                        }
+                      {% endif %}
+                    {% else %}
+                      .layout-header--style2 .container .absolute {
+                        background-color: {{ block.settings.bg_color_content }};
+                      }
+                      .layout-header--style2 .container .absolute:before {
+                        border-color: {{ block.settings.border_color_content }};
+                      }
+                      .layout-header--style2 .container .absolute .collection-des a {
+                        color: {{ block.settings.color_wrapper }};
+                      }
+                    {% endif %}
+
+                    .collection-header.collection-header-sections .collection-static {
+                      position: static;
+                      width: 100%;
+                      max-width: 500px;
+                      margin: 30px auto 0;
+                      text-align: center;
+                    }
+
+                    .collection-header.collection-header-sections .collection-image {
+                      margin-bottom: 1px;
+                    }
+
+                    {% else %}
+                    .collection-template .reverse-mb {
+                      display: -webkit-box;
+                      display: -webkit-flex;
+                      display: -moz-flex;
+                      display: -ms-flexbox;
+                      display: flex;
+                      -webkit-flex-direction: column-reverse;
+                      -moz-flex-direction: column-reverse;
+                      -ms-flex-direction: column-reverse;
+                      flex-direction: column-reverse;
+                    }    
+                    {% endif %}
+                  }
+                </style>
+              {% endif %}
+
+              <div class="toolbar
+                                  {% if section.settings.view_as_enable or section.settings.limited_view %}different-toolbar{% endif %}
+                                  {% if section.settings.view_as_enable or section.settings.sort_enable or section.settings.limited_view %}has-padding{% endif %}
+                                  {% unless section.settings.view_as_enable or section.settings.sort_enable or section.settings.limited_view %}not-padding{% endunless %}">
+                <div class="column-left">
+                  <div class="boost-pfs-filter-tree-mobile-button">{% render 'boost-pfs-filter-skeleton', type: 'button' %}</div>
+
+                  <div class="sidebar-label">
+
+                    <span class="sidebar_more" {% if settings.enable_multilang %} data-translate="collections.sidebar.sidebar_more" {% endif %}>
+                      {{ 'collections.sidebar.sidebar_more' | t }}
+                    </span>
+                  </div>
+                  {% if section.settings.view_as_enable or enable_filter_tree_button_desktop_v %}
+                    <div class="filters-toolbar__view-as toolbar-col" data-view-as>
+                      {%- if enable_filter_tree_button_desktop_v -%}
+                        <div class="boost-pfs-filter-tree-desktop-button">{%- render 'boost-pfs-filter-skeleton', type: 'button' -%}</div>
+                      {%- endif -%}
+                      <label data-translate="collections.toolbar.view_as">
+                        {{ 'collections.toolbar.view_as' | t}}
+                      </label>
+
+                      <div class="view-mode">
+                        <span class="icon-mode icon-mode-list{% if section.settings.collection_results_per_row == '1' %} active{% endif %}" data-col="1"></span>
+                        <span class="icon-mode icon-mode-grid grid-2{% if section.settings.collection_results_per_row == '2' %} active{% endif %}" data-col="2"></span>
+                        <span class="icon-mode icon-mode-grid grid-3{% if section.settings.collection_results_per_row == '3' %} active{% endif %}" data-col="3"></span>
+                        <span class="icon-mode icon-mode-grid grid-4{% if section.settings.collection_results_per_row == '4' %} active{% endif %}" data-col="4"></span>
+                        <span class="icon-mode icon-mode-grid grid-5{% if section.settings.collection_results_per_row == '5' %} active{% endif %}" data-col="5"></span>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+
+                {% if section.settings.sort_enable or section.settings.limited_view %}
+                  <div class="column-right">
+                    {% if section.settings.limited_view %}
+
+                      <div class="filters-toolbar__limited-view toolbar-col" data-limited-view>
+                        <label data-translate="collections.toolbar.item_per_page">
+                          {{ 'collections.toolbar.item_per_page' | t}}
+                        </label>
+
+                        <div class="limited-view boost-pfs-filter-top-show-limit">{% render 'boost-pfs-filter-skeleton', width: 2 %}</div>
+                      </div>
+                    {% endif %}
+
+                    {% if section.settings.sort_enable %}
+                      <div class="boost-pfs-filter-toolbar-item text-right boost-pfs-filter-custom-sorting toolbar-col boost-pfs-filter-top-sorting">{% render 'boost-pfs-filter-skeleton', width: 2 %}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+              <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v" data-is-mobile>{% render 'boost-pfs-filter-skeleton', type: 'filter-tree-v'  %}</div>
+              {% if boost_in_collection_search == 'true' %}
+                <div class="boost-pfs-in-collection-search">
+                  {% render 'boost-pfs-filter-skeleton', width: 4 %}
+                </div>
+              {% endif %}
+              <div data-section-id="{{ section.id }}" data-section-type="collection-template" id="main-collection-product-grid" data-id="{{ section.id }}">
+                <div class="boost-pfs-filter-products product-collection {{ rows }} row">
+                  {% if collection.products_count > 0 %}
+                    {% for product in collection.products %}
+                      <div class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">
+                        {% if settings.style_product_grid == 'style_product_grid_2' %}
+                          {% render 'product-grid-item-style-2' with product as product, serial: forloop.index %}
+                        {% else %}
+                          {% render 'product-grid-item' with product as product, serial: forloop.index %}
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  {% else %}
+                    <p class="col-12 text-center" {% if settings.enable_multilang %} data-translate="collections.general.no_matches" {% endif %}>
+                      {{ 'collections.general.no_matches' | t }}
+                    </p>
+                  {% endif %}
+                </div>
+
+
+                <div class="padding">
+                  <div class="infinite-scrolling">
+                    <div class="boost-pfs-filter-load-more"></div>
+                  </div>
+                  <div class="toolbar-bottom">
+                    <p class="page-total boost-pfs-filter-total-products"></p>
+
+                    <ul class="boost-pfs-filter-pagination-page boost-pfs-filter-bottom-pagination">
+                      {% render 'pagination-page' paginate: paginate %}
+                    </ul>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          {% endpaginate %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <style>
   .collection-template .padding .infinite-scrolling .btn {
     background-color: {{ section.settings.bg_color_button_more }};
@@ -42,7 +394,86 @@
     color: {{ section.settings.color_button_more }};
   }
 </style>
+
+<script>
+  // Declare boostPFSThemeConfig variable
+  var boostPFSThemeConfig = {
+    label: {
+      sale: {{ 'products.product.sale' | t | json }},
+      sold_out: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      from_price: {{ 'products.product.from' | t | json }},
+      select_options: {{ 'products.product.select_options' | t | json }},
+      add_to_cart: {{ 'products.product.add_to_cart' | t | json }},
+      quick_view: {{ 'products.product.quick_view' | t | json }},
+      add_to_wishlist: {{ 'wishlist.general.add_to_wishlist' | t | json }},
+      wishlist_note: {{ 'wishlist.general.note' | t | json }},
+      view_as: {{ 'collections.toolbar.view_as' | t | json }},
+      grid_view: {{ 'collections.general.grid_view' | t | json }},
+      list_view: {{ 'collections.general.list_view' | t | json }},
+      toolbar_next: {{ 'collections.toolbar.next' | t | json }},
+      toolbar_previous: {{ 'collections.toolbar.previous' | t | json }},
+      toolbar_showing: {{ 'collections.toolbar.showing' | t | json }},
+      toolbar_of: {{ 'collections.toolbar.of' | t | json }},
+      size:  {{ 'products.product.size' | t | json }},
+    },
+    custom: {
+      products_per_page: {% if product_per_page %} {{ product_per_page | json }} {% else %} 24 {% endif %},
+      products_per_row: {% if section.settings.collection_results_per_row %} {{ section.settings.collection_results_per_row }} {% else %} 4 {% endif %},
+      grid_item_width: {% if grid_item_width %} {{ grid_item_width | json}} {% else %} "col-md-3" {% endif %},
+      image_size: {% if image_size %} {{ image_size | json }} {% else %} "250x" {% endif %},
+      product_image_border: {% if settings.product_image_border %} {{ settings.product_image_border | json }} {% else %} false  {% endif %},
+      product_image_crop: {% if settings.product_image_crop %} {{ settings.product_image_crop | json }} {% else %} false {% endif %},
+      display_product_reviews: {% if settings.display_product_reviews %} {{ settings.display_product_reviews | json }} {% else %} false {% endif %},
+      display_item_swatch: {% if settings.display_item_swatch %} {{ settings.display_item_swatch | json }} {% else %} false {% endif %},
+      time_lazy_load: {% if settings.time_lazy_load %} {{ settings.time_lazy_load }} {% else %} 100 {% endif %},
+      show_vendor: {% if settings.show_vendor %} {{ settings.show_vendor | json }} {% else %} false {% endif %},
+      enable_quick_view: {% if settings.enable_quick_view %} {{ settings.enable_quick_view | json }} {% else %} false {% endif %},
+      enable_size_swatch: {% if settings.display_item_size %} {{ settings.display_item_size | json }} {% else %} false {% endif %},
+      enable_wishlist: {% if settings.enable_wishlist %} {{ settings.enable_wishlist | json }} {% else %} false {% endif %},
+      display_button: {% if settings.display_button %} {{ settings.display_button | json }} {% else %} false {% endif %},
+      image_swap: {% if settings.image_swap %} {{settings.image_swap | json }} {% else %} false {% endif %},
+      product_image_resize: {% if settings.product_image_resize %} {{ settings.product_image_resize | json }} {% else %} false {% endif %},
+      enable_multilang: {% if settings.enable_multilang %} {{ settings.enable_multilang | json }} {% else %} false {% endif %},
+      style_product_grid: {% if settings.style_product_grid %} {{ settings.style_product_grid | json }} {% else %} "style_product_grid_1" {% endif %}
+    },
+    customer: {
+      tags: {% if customer.tags%} {{ customer.tags | json }} {% else %} [] {% endif %},
+      email: {% if customer.email %} {{ customer.email  | json }} {% else %} '' {% endif %},
+    }
+  };
+
+  // Declare boostPFSTemplate variable
+  var boostPFSTemplate = {
+    'gridBorderClass': 'grid-item-border',
+    'onSaleClass': 'on-sale',
+    'soldOutClass': 'sold-out',
+
+    //Layout
+    'productGridItemHtml': {% render 'boost-pfs-filter-html', layout: 'productGridItemHtml' %},
+    'productGridItem2Html': {% render 'boost-pfs-filter-html', layout: 'productGridItem2Html' %},
+    'productListItemHtml': {% render 'boost-pfs-filter-html', layout: 'productListItemHtml' %},
+    'quickViewHtml': {% render 'boost-pfs-filter-html', layout: 'quickViewHtml' %},
+    'reviewHtml': {% render 'boost-pfs-filter-html', layout: 'reviewHtml' %},
+    'wishlistHtml': {% render 'boost-pfs-filter-html', layout: 'wishlistHtml' %},
+    'showLimitHtml': {% render 'boost-pfs-filter-html', layout: 'showLimitHtml' %},
+
+    // Pagination Template
+    'previousActiveHtml': {% render 'boost-pfs-filter-html', layout: 'previousActiveHtml' %},
+    'previousDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'previousDisabledHtml' %},
+    'nextActiveHtml': {% render 'boost-pfs-filter-html', layout: 'nextActiveHtml' %},
+    'nextDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'nextDisabledHtml' %},
+    'pageItemHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemHtml' %},
+    'pageItemSelectedHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemSelectedHtml' %},
+    'pageItemRemainHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemRemainHtml' %},
+    'paginateHtml': {% render 'boost-pfs-filter-html', layout: 'paginateHtml' %},
+
+    //Sorting
+    'sortingHtml': {% render 'boost-pfs-filter-html', layout: 'sortingHtml' %}
+  }
+</script>
 {% schema %}
+
   {
     "name": "Main Collection",
     "settings": [
