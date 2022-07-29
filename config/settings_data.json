@@ -5,7 +5,7 @@
     "bg_body_boxed": "#f8f8f8",
     "header_layout": "08",
     "list_collections_layout": "collections_01_grid",
-    "category_layout": "supermarket",
+    "category_layout": "default",
     "product_layout": "supermarket",
     "blog_layout": "default",
     "footer_layout": "default",
