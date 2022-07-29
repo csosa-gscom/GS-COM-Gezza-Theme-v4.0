@@ -391,7 +391,7 @@
         "fd0a4053-9c1d-4f38-9a03-97718a54327a": {
           "type": "collection_list",
           "settings": {
-            "collection": "network-ethernet-cable",
+            "collection": "ethernet-cable",
             "display_countdow": false,
             "title": "Special Offers",
             "des": "Sale up to 60% off on selected items. End ins:",
@@ -402,7 +402,7 @@
         "382a2c72-acea-4ef6-9c53-f27a1b6b5ede": {
           "type": "collection_list",
           "settings": {
-            "collection": "network-patch-panel",
+            "collection": "patch-panel",
             "display_countdow": false,
             "title": "Special Offers",
             "des": "Sale up to 60% off on selected items. End ins:",
@@ -468,7 +468,7 @@
         "445824e3-ea22-47ce-af16-b62e198ee6a2": {
           "type": "collection_list",
           "settings": {
-            "collection": "power-over-thernet-poe",
+            "collection": "power-over-ethernet",
             "display_countdow": false,
             "title": "Special Offers",
             "des": "Sale up to 60% off on selected items. End ins:",
